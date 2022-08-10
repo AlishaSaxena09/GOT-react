@@ -1,17 +1,25 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Loader from "../partials/Loader";
 
 export default function Book() {
   const [books, setBooks] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    setIsLoading(true);
     fetch(`https://anapioficeandfire.com/api/books`)
       .then((res) => res.json())
       .then((res) => {
         setBooks(res);
+        setIsLoading(false);
         console.log(res);
       });
   }, []);
+
+  if (isLoading) {
+    return <Loader />;
+  }
 
   return (
     <div className="p-10">

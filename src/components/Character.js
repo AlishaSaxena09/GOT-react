@@ -1,18 +1,25 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Loader from "../partials/Loader";
 
 export default function Character() {
   const { id } = useParams();
   const [character, setCharacter] = useState("");
-
+  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
+    setIsLoading(true);
     fetch(`https://anapioficeandfire.com/api/characters/${id}`)
       .then((res) => res.json())
       .then((res) => {
         setCharacter(res);
+        setIsLoading(false);
         console.log(res);
       });
   }, [id]);
+
+  if (isLoading) {
+    return <Loader />;
+  }
 
   return (
     <div className=" bg-gray-50 w-full font-oswald p-10">

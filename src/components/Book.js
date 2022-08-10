@@ -1,18 +1,26 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Loader from "../partials/Loader";
 
 export default function Book() {
   const { id } = useParams();
   const [book, setBook] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    setIsLoading(true);
     fetch(`https://anapioficeandfire.com/api/books/${id}`)
       .then((res) => res.json())
       .then((res) => {
         setBook(res);
+        setIsLoading(false);
         console.log(res);
       });
   }, [id]);
+
+  if (isLoading) {
+    return <Loader />;
+  }
 
   return (
     <div className=" flex bg-gray-50 h-screen w-full font-oswald p-10">
