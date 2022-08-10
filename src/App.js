@@ -7,10 +7,12 @@ import Characters from "./components/Characters";
 import Character from "./components/Character";
 import Houses from "./components/Houses";
 import House from "./components/House";
+import Header from "./components/Header";
 
 function App() {
   return (
     <div className="App">
+      <Header />
       <Routes>
         <Route path="/books" element={<Books />}></Route>
         <Route path="/characters" element={<Characters />}></Route>

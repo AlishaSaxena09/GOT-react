@@ -1,27 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Home() {
   return (
     <div>
-      <nav className="flex justify-between flex-wrap p-6 shadow-xl">
-        <div className="w-80">
-          <img alt="got" src="/images/got-logo.jpeg"></img>
-        </div>
-        <ul className="flex mr-8 font-cinzel ">
-          <Link to="/books">
-            <li className="mr-8 text-lg font-medium hover:text-xl">Books</li>
-          </Link>
-          <Link to="/characters">
-            <li className="mr-8 text-lg font-medium hover:text-xl">
-              Characters
-            </li>
-          </Link>
-          <Link to="/houses">
-            <li className="mr-8 text-lg font-medium hover:text-xl">Houses</li>
-          </Link>
-        </ul>
-      </nav>
       <main className="m-10 p-10 text-center font-oswald">
         <div className="flex justify-center">
           <h1 className="text-5xl font-extrabold  my-8">
@@ -40,7 +22,7 @@ export default function Home() {
         </p>
       </main>
       <div className="flex p-10 m-10 justify-between">
-        <div className=" border-4 border-blue-800 w-1/4 p-4 font-oswald">
+        <div className="shadow-md w-1/4 p-4 font-oswald">
           <h3 className=" font-bold text-2xl text-center">Books of GOT</h3>
           <div className="my-4  ">
             <img alt="got" src="/images/books.webp"></img>
@@ -52,12 +34,12 @@ export default function Home() {
             for literally a decade.
           </p>
           <Link to="/books">
-            <button className="bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 border border-blue-800 rounded m-auto">
+            <button className=" font-bold py-2 px-4 border border-black rounded m-auto">
               More
             </button>
           </Link>
         </div>
-        <div className=" border-4 border-green-800 w-1/4 p-4 font-oswald">
+        <div className="shadow-md w-1/4 p-4 font-oswald">
           <h3 className=" font-bold text-2xl text-center">Characters of Got</h3>
           <div className="my-4  ">
             <img alt="got" src="/images/charac.webp"></img>
@@ -69,12 +51,12 @@ export default function Home() {
             despicable?
           </p>
           <Link to="/characters">
-            <button className="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-4 border border-green-800 rounded m-auto">
+            <button className="font-bold py-2 px-4 border border-black rounded m-auto">
               More
             </button>
           </Link>
         </div>
-        <div className=" border-4 border-red-800 w-1/4 p-4 font-oswald">
+        <div className=" shadow-lg w-1/4 p-4 font-oswald">
           <h3 className=" font-bold text-2xl text-center">The Houses of GOT</h3>
           <div className="my-4  ">
             <img alt="got" src="/images/houses.webp"></img>
@@ -86,7 +68,7 @@ export default function Home() {
             greed, lust, pride, sloth, and wrath.
           </p>
           <Link to="/houses">
-            <button className="bg-red-700 hover:bg-red-800 text-white font-bold py-2 px-4 border border-red-800 rounded m-auto">
+            <button className=" text-black font-bold py-2 px-4 border-black border rounded m-auto">
               More
             </button>
           </Link>

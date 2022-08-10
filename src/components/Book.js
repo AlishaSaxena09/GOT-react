@@ -15,8 +15,8 @@ export default function Book() {
   }, [id]);
 
   return (
-    <div className=" bg-blue-800 w-full font-oswald p-10">
-      <div className="  border-8 border-black m-auto text-center px-2 py-8 bg-white w-fit top-3 flex flex-wrap justif-center">
+    <div className=" flex bg-gray-50 h-screen w-full font-oswald p-10">
+      <div className=" rounded-lg shadow-lg m-auto text-center px-2 py-8 bg-white w-fit top-3 flex flex-wrap justif-center items-center">
         <div className="w-1/2">
           <img alt="got" className="w-80 m-auto" src="/images/got-i.jpg"></img>
         </div>

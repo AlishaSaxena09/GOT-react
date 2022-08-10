@@ -15,13 +15,13 @@ export default function Book() {
 
   return (
     <div className="p-10">
-      <h1 className="text-center text-4xl text-black font-oswald font-bold p-3 border-t-2 border-b-2">
+      <h1 className="text-center text-4xl text-black font-oswald font-bold p-6 ">
         Here you will find every Game of Thrones Book 📖
       </h1>
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap justify-center">
         {books.map((book, i) => {
           return (
-            <div className="max-w-sm rounded overflow-hidden shadow-lg m-4 ">
+            <div className="max-w-sm rounded overflow-hidden shadow-lg m-4 items-center">
               <img alt="book" className="w-full" src="/images/got-i.jpg"></img>
               <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2">{book.name}</div>

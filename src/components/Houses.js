@@ -20,12 +20,13 @@ export default function Characters() {
         console.log(res);
       });
   }, []);
+
   return (
     <div className="p-10">
-      <h1 className="text-center text-4xl text-black font-oswald font-bold p-3 border-t-2 border-b-2">
+      <h1 className="text-center text-4xl text-black font-oswald font-bold p-3 ">
         Houses Of GOT
       </h1>
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap justify-center">
         {houses.map((house, i) => {
           return (
             <div className="max-w-sm rounded overflow-hidden shadow-lg m-4">

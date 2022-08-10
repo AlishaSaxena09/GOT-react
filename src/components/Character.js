@@ -15,16 +15,20 @@ export default function Character() {
   }, [id]);
 
   return (
-    <div className=" bg-green-800 w-full font-oswald">
-      <div className="  border-8 border-black m-auto text-center px-2 py-8 bg-white w-fit top-3 flex flex-wrap justif-center">
-        <div className="w-1/2">
+    <div className=" bg-gray-50 w-full font-oswald p-10">
+      <div className="  rounded-lg shadow-lg m-auto text-center px-2 py-8 bg-white w-fit top-3 flex flex-wrap justif-center items-center">
+        <div className="w-1/2 p-4">
           <img alt="got" className="w-80 m-auto" src="/images/got-i.jpg"></img>
         </div>
         <div className="w-1/2 leading-9 pt-10">
-          <h1 className=" text-6xl font-extrabold font-cinzel">
-            {character.name}
-          </h1>
-          <p className="text-2xl my-4">Played By {character.playedBy}</p>
+          {character.name ? (
+            <h1 className=" text-6xl font-extrabold font-cinzel">
+              {character.name}
+            </h1>
+          ) : null}
+          {character.playedBy ? (
+            <p className="text-2xl my-4">{character.playedBy}</p>
+          ) : null}
           {character.titles ? (
             <p className=" text-lg my-4">{character.titles}</p>
           ) : null}

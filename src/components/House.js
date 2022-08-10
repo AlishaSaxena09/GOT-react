@@ -15,8 +15,8 @@ export default function House() {
   }, [id]);
 
   return (
-    <div className=" bg-red-800 w-full font-oswald">
-      <div className="  border-8 border-black m-auto text-center px-2 py-8 bg-white w-fit top-3 flex flex-wrap justif-center">
+    <div className=" bg-gray-50 w-full font-oswald pt-10">
+      <div className="  rounded-lg shadow-lg items-center m-auto text-center px-2 py-8 bg-white w-fit top-3 flex flex-wrap justif-center">
         <div className="w-1/2">
           <img
             alt="houses"
