@@ -1,17 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Characters() {
-  const { id } = useParams();
   const [characters, setCharacters] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     fetch(`https://www.anapioficeandfire.com/api/characters?pageSize=50`)
       .then((res) => res.json())
       .then((res) => {
         setCharacters(res);
-        setIsLoading(false);
         console.log(res);
       });
   }, []);

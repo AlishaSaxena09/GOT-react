@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Characters() {
-  const { id } = useParams();
   const [houses, setHouses] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     fetch(`https://www.anapioficeandfire.com/api/houses?pageSize=50`)
@@ -19,7 +17,6 @@ export default function Characters() {
               return b.swornMembers.length - a.swornMembers.length;
             })
         );
-        setIsLoading(false);
         console.log(res);
       });
   }, []);

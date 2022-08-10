@@ -6,7 +6,7 @@ export default function Home() {
     <div>
       <nav className="flex justify-between flex-wrap p-6 shadow-xl">
         <div className="w-80">
-          <img src="/images/got-logo.jpeg"></img>
+          <img alt="got" src="/images/got-logo.jpeg"></img>
         </div>
         <ul className="flex mr-8 font-cinzel ">
           <Link to="/books">
@@ -27,7 +27,7 @@ export default function Home() {
           <h1 className="text-5xl font-extrabold  my-8">
             Welcome to the world of GOT !
           </h1>
-          <img src="/images/swords.png" className="w-20"></img>
+          <img alt="got" src="/images/swords.png" className="w-20"></img>
         </div>
 
         <p className="text-lg font-light text-left">
@@ -43,7 +43,7 @@ export default function Home() {
         <div className=" border-4 border-blue-800 w-1/4 p-4 font-oswald">
           <h3 className=" font-bold text-2xl text-center">Books of GOT</h3>
           <div className="my-4  ">
-            <img src="/images/books.webp"></img>
+            <img alt="got" src="/images/books.webp"></img>
           </div>
           <p className="my-4">
             Although there are 5 Game of Thrones books published, author George
@@ -60,7 +60,7 @@ export default function Home() {
         <div className=" border-4 border-green-800 w-1/4 p-4 font-oswald">
           <h3 className=" font-bold text-2xl text-center">Characters of Got</h3>
           <div className="my-4  ">
-            <img src="/images/charac.webp"></img>
+            <img alt="got" src="/images/charac.webp"></img>
           </div>
           <p className="my-4">
             Though A Game of Thrones is a book of fantasy, it lacks the clear
@@ -77,7 +77,7 @@ export default function Home() {
         <div className=" border-4 border-red-800 w-1/4 p-4 font-oswald">
           <h3 className=" font-bold text-2xl text-center">The Houses of GOT</h3>
           <div className="my-4  ">
-            <img src="/images/houses.webp"></img>
+            <img alt="got" src="/images/houses.webp"></img>
           </div>
           <p className="my-4">
             Building on certain themes that prevail over Game of Thrones’ story,
